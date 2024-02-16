@@ -18,7 +18,7 @@ fn main() {
 
     io::stdin()
         .read_line(&mut guess) //searches what is in the adress of mut guess at the moment.
-        .expect("Failed to read the line...");
+        .expect("Failed to read the line...");//readline is expected to send back a result value. Result is an Enum, which can be in multiple states, so to make the code safer, we need to put the .expect in the end of a call.
 
     println!("You guessed: {guess}");
 }
